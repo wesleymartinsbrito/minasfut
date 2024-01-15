@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Player {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String name;
     private Integer age;
     private String posicao;
@@ -24,7 +24,7 @@ public class Player {
 
     }
 
-    public Player(Integer id, String name, Integer age, String posicao, String nacionalidade, String localDeNascimento, Double altura, Integer gols, Integer assistencias, String imgUrl) {
+    public Player(Long id, String name, Integer age, String posicao, String nacionalidade, String localDeNascimento, Double altura, Integer gols, Integer assistencias, String imgUrl) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -37,11 +37,11 @@ public class Player {
         this.imgUrl = imgUrl;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
