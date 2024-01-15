@@ -14,27 +14,27 @@ public class Player {
     private Integer age;
     private String posicao;
     private String nacionalidade;
-    private String localDeNascimento;
+    private String local_de_nascimento;
     private Double altura;
     private Integer gols;
     private Integer assistencias;
-    private String imgUrl;
+    private String img_url;
 
     public Player(){
 
     }
 
-    public Player(Long id, String name, Integer age, String posicao, String nacionalidade, String localDeNascimento, Double altura, Integer gols, Integer assistencias, String imgUrl) {
+    public Player(Long id, String name, Integer age, String posicao, String nacionalidade, String local_de_nascimento, Double altura, Integer gols, Integer assistencias, String img_url) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.posicao = posicao;
         this.nacionalidade = nacionalidade;
-        this.localDeNascimento = localDeNascimento;
+        this.local_de_nascimento = local_de_nascimento;
         this.altura = altura;
         this.gols = gols;
         this.assistencias = assistencias;
-        this.imgUrl = imgUrl;
+        this.img_url = img_url;
     }
 
     public Long getId() {
@@ -78,11 +78,11 @@ public class Player {
     }
 
     public String getLocalDeNascimento() {
-        return localDeNascimento;
+        return local_de_nascimento;
     }
 
-    public void setLocalDeNascimento(String localDeNascimento) {
-        this.localDeNascimento = localDeNascimento;
+    public void setLocalDeNascimento(String local_de_nascimento) {
+        this.local_de_nascimento = local_de_nascimento;
     }
 
     public Double getAltura() {
@@ -110,11 +110,11 @@ public class Player {
     }
 
     public String getImgUrl() {
-        return imgUrl;
+        return img_url;
     }
 
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
+    public void setImgUrl(String img_url) {
+        this.img_url = img_url;
     }
 
     @Override
