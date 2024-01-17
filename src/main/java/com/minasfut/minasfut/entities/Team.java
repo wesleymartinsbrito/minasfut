@@ -1,11 +1,11 @@
 package com.minasfut.minasfut.entities;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_team")
 public class Team {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
