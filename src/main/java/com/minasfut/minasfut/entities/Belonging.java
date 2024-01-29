@@ -1,5 +1,6 @@
 package com.minasfut.minasfut.entities;
 
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
@@ -10,6 +11,7 @@ import java.util.Objects;
 public class Belonging {
     private Integer position;
 
+    @EmbeddedId
     private BelongingPK id = new BelongingPK();
 
     public Belonging(){
