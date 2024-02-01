@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(name = "/player")
+@RequestMapping(value = "/player")
 public class PlayerController {
 
     @Autowired
