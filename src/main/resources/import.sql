@@ -19,3 +19,10 @@ INSERT INTO tb_player (name, age, posicao, nacionalidade, local_de_nascimento, a
 INSERT INTO tb_player (name, age, posicao, nacionalidade, local_de_nascimento, altura, gols, assistencias, img_url) VALUES ('Patrick Bezerra do Nascimento', 31, 'Meio-campista/Atacante', 'Brasileiro', 'Rio de Janeiro, Rio de Janeiro, Brasil', 1.76, 46, 26, 'https://img.a.transfermarkt.technology/portrait/header/333159-1675216507.jpg?lm=1');
 INSERT INTO tb_player (name, age, posicao, nacionalidade, local_de_nascimento, altura, gols, assistencias, img_url) VALUES ('Renzo Saravia', 30, 'Lateral-direito', 'Argentino', 'Villa de María del Río Seco, Argentina', 1.78, 1, 0, 'https://img.a.transfermarkt.technology/portrait/header/268642-1582712834.png?lm=1');
 INSERT INTO tb_player (name, age, posicao, nacionalidade, local_de_nascimento, altura, gols, assistencias, img_url) VALUES ('Otávio Henrique Passos Santos', 29, 'Meio-campista', 'Brasileiro', 'Maceió, Alagoas, Brasil', 1.73, 6, 0, 'https://img.a.transfermarkt.technology/portrait/header/312314-1596559053.jpg?lm=1');
+
+INSERT INTO tb_team (name) VALUES ('Atlético Mineiro')
+
+INSERT INTO tb_belonging (team_id, player_id, position) VALUES (1, 1, 0);
+INSERT INTO tb_belonging (team_id, player_id, position) VALUES (1, 2, 1);
+INSERT INTO tb_belonging (team_id, player_id, position) VALUES (1, 3, 2);
+INSERT INTO tb_belonging (team_id, player_id, position) VALUES (1, 4, 3);

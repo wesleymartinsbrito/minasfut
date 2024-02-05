@@ -1,6 +1,7 @@
 package com.minasfut.minasfut.dto;
 
 import com.minasfut.minasfut.entities.Player;
+import com.minasfut.minasfut.projections.PlayerProjection;
 
 public class PlayerDTO {
 
@@ -22,6 +23,9 @@ public class PlayerDTO {
         this.age = entity.getAge();
         this.gols = entity.getGols();
         this.assistencias = entity.getAssistencias();
+    }
+
+    public PlayerDTO(PlayerProjection playerProjection) {
     }
 
     public Long getId() {
