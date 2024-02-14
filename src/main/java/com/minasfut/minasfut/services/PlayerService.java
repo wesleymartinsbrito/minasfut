@@ -37,4 +37,9 @@ public class PlayerService {
     public Player insert(Player entity){
         return playerRepository.save(entity);
     }
+
+    @Transactional(readOnly = false)
+    public void delete(Long id){
+        playerRepository.deleteById(id);
+    }
 }

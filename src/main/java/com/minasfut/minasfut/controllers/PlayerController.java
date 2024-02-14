@@ -32,4 +32,9 @@ public class PlayerController {
         return ResponseEntity.ok().body(entity);
     }
 
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id){
+        playerService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }
