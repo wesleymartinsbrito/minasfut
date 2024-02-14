@@ -42,4 +42,18 @@ public class PlayerService {
     public void delete(Long id){
         playerRepository.deleteById(id);
     }
+
+    public Player update(Long id, Player obj){
+        Player entity = playerRepository.getReferenceById(id);
+        updateEntity(entity, obj);
+        return playerRepository.save(entity);
+    }
+
+    private void updateEntity(Player entity, Player obj) {
+        entity.setAge(obj.getAge());
+        entity.setAssistencias(obj.getAssistencias());
+        entity.setGols(obj.getGols());
+        entity.setPosicao(obj.getPosicao());
+
+    }
 }
