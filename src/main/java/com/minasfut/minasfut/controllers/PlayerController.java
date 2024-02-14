@@ -1,12 +1,11 @@
 package com.minasfut.minasfut.controllers;
 
 import com.minasfut.minasfut.dto.PlayerDTO;
+import com.minasfut.minasfut.entities.Player;
 import com.minasfut.minasfut.services.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +26,10 @@ public class PlayerController {
         return result;
     }
 
+    @PostMapping
+    public ResponseEntity<Player> insert(@RequestBody Player entity){
+        entity = playerService.insert(entity);
+        return ResponseEntity.ok().body(entity);
+    }
 
 }

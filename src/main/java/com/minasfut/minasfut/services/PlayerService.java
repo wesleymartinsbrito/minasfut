@@ -32,4 +32,9 @@ public class PlayerService {
         List<PlayerProjection> result = playerRepository.searchByList(listId);
         return (PlayerDTO) result.stream().map(PlayerDTO::new).toList();
     }
+
+    @Transactional(readOnly = false)
+    public Player insert(Player entity){
+        return playerRepository.save(entity);
+    }
 }
