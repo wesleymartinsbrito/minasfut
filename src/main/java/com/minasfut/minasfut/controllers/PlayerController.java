@@ -55,4 +55,9 @@ public class PlayerController {
         entity = playerService.updateAssistencias(id, entity);
         return ResponseEntity.ok().body(entity);
     }
+
+    public ResponseEntity<Player> updateGols(@PathVariable Long id, @RequestBody Player entity){
+        entity = playerService.updateGols(id, entity);
+        return ResponseEntity.ok().body(entity);
+    }
 }
