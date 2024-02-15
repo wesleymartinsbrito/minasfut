@@ -86,4 +86,14 @@ public class PlayerService {
     private void updateGolsMethod(Player entity, Player obj) {
         entity.setGols(obj.getGols());
     }
+
+    public Player updatePosicao(Long id, Player obj) {
+        Player entity = playerRepository.getReferenceById(id);
+        updatePosicaoMethod(entity, obj);
+        return playerRepository.save(entity);
+    }
+
+    private void updatePosicaoMethod(Player entity, Player obj) {
+        entity.setPosicao(obj.getPosicao());
+    }
 }

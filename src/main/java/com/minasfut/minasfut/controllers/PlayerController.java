@@ -56,8 +56,15 @@ public class PlayerController {
         return ResponseEntity.ok().body(entity);
     }
 
+    @PutMapping(value = "/{id}/gols")
     public ResponseEntity<Player> updateGols(@PathVariable Long id, @RequestBody Player entity){
         entity = playerService.updateGols(id, entity);
+        return ResponseEntity.ok().body(entity);
+    }
+
+    @PutMapping(value = "/{id}/posicao")
+    public ResponseEntity<Player> updatePosicao(@PathVariable Long id, @RequestBody Player entity){
+        entity = playerService.updatePosicao(id, entity);
         return ResponseEntity.ok().body(entity);
     }
 }
