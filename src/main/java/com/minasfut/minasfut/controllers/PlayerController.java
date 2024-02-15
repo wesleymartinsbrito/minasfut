@@ -49,4 +49,10 @@ public class PlayerController {
         entity = playerService.updateAge(id, entity);
         return ResponseEntity.ok().body(entity);
     }
+
+    @PutMapping(value = "/{id}/assistencias")
+    public ResponseEntity<Player> updateAssistencias(@PathVariable Long id, @RequestBody Player entity){
+        entity = playerService.updateAssistencias(id, entity);
+        return ResponseEntity.ok().body(entity);
+    }
 }

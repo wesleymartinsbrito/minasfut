@@ -66,4 +66,14 @@ public class PlayerService {
     private void updateAgeMethod(Player entity, Player obj) {
         entity.setAge(obj.getAge());
     }
+
+    public Player updateAssistencias(Long id, Player obj){
+        Player entity = playerRepository.getReferenceById(id);
+        updateAssistenciasMethod(entity, obj);
+        return playerRepository.save(entity);
+    }
+
+    private void updateAssistenciasMethod(Player entity, Player obj) {
+        entity.setAssistencias(obj.getAssistencias());
+    }
 }
